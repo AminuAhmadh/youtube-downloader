@@ -28,7 +28,7 @@ def size():
         print('SIZE:', round(gigabyte), 'GB')
 
 
-print('A Youtube downloader')
+print('A Youtube Video downloader')
 link = pyinputplus.inputURL('Enter the Youtube video Link: \n')
 print('Got the link!')
 print('Processing...')
@@ -48,9 +48,9 @@ try:
     print('Getting Video...')
     quality = highest_resolution
     file_size = quality.filesize
-    size()
     print('Downloading the video with highest resolution available...')
-    print(f'RESOLUTION: {highest_resolution.resolution} ')
+    print(f'RESOLUTION: {highest_resolution.resolution}')
+    size()
     print('Downloading Your File...')
     print()
     try: 
@@ -63,4 +63,4 @@ except Exception as error:
     print("Your error occured due to:", error)
     exit()
 
-print("Downloaded Successfully!")
+print(f"Downloaded Successfully on location '{file_path()}'")
