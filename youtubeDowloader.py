@@ -37,20 +37,14 @@ try:
     yt = YouTube(link, on_progress_callback=on_progress)
     highest_resolution = yt.streams.get_highest_resolution()
     # prints out details of the video
+    print('Getting Video...')
     print('TITLE:', yt.title)
     print('YOUTUBER/CHANNEL:', yt.author)
-    desc = pyinputplus.inputYesNo(
-        prompt='Do you also wants to see the video description? ')
-    if desc == 'yes':
-        print('DESCRIPTION:', yt.description)
-    else:
-        pass
-    print('Getting Video...')
+    size()
     quality = highest_resolution
     file_size = quality.filesize
     print('Downloading the video with highest resolution available...')
     print(f'RESOLUTION: {highest_resolution.resolution}')
-    size()
     print('Downloading Your File...')
     print()
     try: 
