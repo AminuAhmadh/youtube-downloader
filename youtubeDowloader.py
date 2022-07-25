@@ -41,31 +41,6 @@ again = True
 while again != False:
     content_type = pyinputplus.inputChoice(['A', 'V', 'P'])
 
-<<<<<<< HEAD
-try:
-    yt = YouTube(link, on_progress_callback=on_progress)
-    highest_resolution = yt.streams.get_highest_resolution()
-    # prints out details of the video
-    print('Getting Video...')
-    print('TITLE:', yt.title)
-    print('YOUTUBER/CHANNEL:', yt.author)
-    size()
-    quality = highest_resolution
-    file_size = quality.filesize
-    print('Downloading the video with highest resolution available...')
-    print(f'RESOLUTION: {highest_resolution.resolution}')
-    print('Downloading Your File...')
-    print()
-    try: 
-        quality.download(file_path())
-    except Exception as Downloaderror:
-        print("Error occured due to:", Downloaderror)
-        exit()
-except Exception as error:
-    print('Opps! an ERROR Occured. try: \n — Checking your connection \n — Url is a valid YouTube watch url \n — Or try again later ')
-    print("Your error occured due to:", error)
-    exit()
-=======
     if content_type == 'A':
         link = pyinputplus.inputURL('Enter the Youtube video Link to get its audio: \n')
         audio = YouTube(link, on_progress_callback=on_progress)
@@ -131,35 +106,3 @@ except Exception as error:
     if redo == 'NO':
         again = False
     continue
->>>>>>> editing
-
-
-
-
-
-#     print('YOUTUBER/CHANNEL:', yt.author)
-#     desc = pyinputplus.inputYesNo(
-#         prompt='Do you also wants to see the video description? ')
-#     if desc == 'yes':
-#         print('DESCRIPTION:', yt.description)
-#     else:
-#         pass
-#     print('Getting Video...')
-#     quality = highest_resolution
-#     file_size = quality.filesize
-#     print('Downloading the video with highest resolution available...')
-#     print(f'RESOLUTION: {highest_resolution.resolution}')
-#     size()
-#     print('Downloading Your File...')
-#     print()
-#     try: 
-#         quality.download(file_path())
-#     except Exception as Downloaderror:
-#         print("Error occured due to:", Downloaderror)
-#         exit()
-# except Exception as error:
-#     print('Opps! an ERROR Occured. try: \n — Checking your connection \n — Url is a valid YouTube watch url \n — Or try again later ')
-#     print("Your error occured due to:", error)
-#     exit()
-
-# print(f"Downloaded Successfully on location '{file_path()}'")
